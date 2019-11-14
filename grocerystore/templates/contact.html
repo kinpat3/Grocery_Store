@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+ <!--Google map-->
+    <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 200px">
+        <iframe src="#googlemapAPI" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+    </div>
+    
+         <div class="row">
+    
+    
+ <div class="container">
+     <div class="container text-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab debitis placeat doloremque non
+            dignissimos quod cum deleniti asperiores reiciendis vero ducimus temporibus excepturi
+            voluptatum nobis, hic at blanditiis sequi porro.</p>
+    </div>
+    </div>
+         <div class="container">
+            <div class="container text-center">
+                <img src="#"
+                    alt="Pixel Art Chat Bubble" style="width:150px;height:150x;"> </div>
+            </div>
+
+ <div class="col-md-6 mb-4">
+    <form>
+    
+        <div class="md-form">
+            <input type="text" id="contact-name" class="form-control">
+            <label for="contact-name" class="">Your name</label>
+        </div>
+    
+        <div class="md-form">
+            <input type="text" id="contact-email" class="form-control">
+            <label for="contact-email" class="">Your email</label>
+        </div>
+    
+        <div class="md-form">
+            <input type="text" id="contact-Subject" class="form-control">
+            <label for="contact-Subject" class="">Subject</label>
+        </div>
+    
+    </form>
+</div>
+
+ <div class="col-md-6 mb-4">
+    <div class="md-form primary-textarea">
+         <textarea id="contact-message" class="md-textarea form-control mb-0" rows="5"
+         style="padding-bottom: 1.2rem;"></textarea>
+        <label for="contact-message">Your message</label>
+    </div>
+</div>
+                
+<div class="col-md-12">
+    <div class="text-center">
+       <a class="btn btn-mdb-color btn-block">Send Message</a>
+    </div>
+</div>
+<!-- Contact Section -->
+<h1>Contact Us Here:</h1>
+   <div class="card">
+       <div class="card-body">
+           <p>Contact Form:</p>
+           <form action="" method="POST">
+               {{ form.hidden_tag() }}
+               <fieldset>
+                   {{ form.name.label}}
+                   {{ form.name(class="form-control") }}
+               </fieldset>
+               <fieldset>
+                   <label for="email">Email</label>
+                   {{ form.email(class="form-control") }}
+               </fieldset>
+
+               <fieldset>
+                   {{ form.subject.label}}
+                   {{ form.subject(class="form-control") }}
+               </fieldset>
+               <fieldset>
+                   {{ form.message.label}}
+                   {{ form.message(class="form-control") }}
+               </fieldset>
+               {{ form.submit() }}
+           </form>
+       </div>
+   </div>
+    {% endblock %}
+    
+ 
